@@ -1,0 +1,384 @@
+{
+  "dataset": {
+    "name": "Tiny Shakespeare",
+    "source": "https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt",
+    "tokens_used": 30000,
+    "train_tokens": 24000,
+    "validation_tokens": 3000,
+    "test_tokens": 3000,
+    "vocabulary_size": 3163,
+    "tokenization": "lowercased words and punctuation; max 6,000 vocabulary items, remaining words mapped to <unk>"
+  },
+  "settings": {
+    "seed": 42,
+    "epochs": 8,
+    "sequence_length": 20,
+    "window_stride": 5,
+    "batch_size": 64,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "device": "cpu"
+  },
+  "models": {
+    "SimpleRNN": {
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 7.330265792436258,
+          "val_loss": 6.39404011412755,
+          "val_perplexity": 598.2687777702873,
+          "val_accuracy": 0.08053691275167785,
+          "epoch_seconds": 5.537603855133057
+        },
+        {
+          "epoch": 2,
+          "train_loss": 5.756991928870525,
+          "val_loss": 6.372554523032783,
+          "val_perplexity": 585.5517253517542,
+          "val_accuracy": 0.08053691275167785,
+          "epoch_seconds": 3.740273952484131
+        },
+        {
+          "epoch": 3,
+          "train_loss": 5.59685403491379,
+          "val_loss": 6.356207751587734,
+          "val_perplexity": 576.0576552390353,
+          "val_accuracy": 0.08557046979865772,
+          "epoch_seconds": 4.048692464828491
+        },
+        {
+          "epoch": 4,
+          "train_loss": 5.454616805133072,
+          "val_loss": 6.375425991595992,
+          "val_perplexity": 587.2355350696058,
+          "val_accuracy": 0.09563758389261745,
+          "epoch_seconds": 23.160385131835938
+        },
+        {
+          "epoch": 5,
+          "train_loss": 5.3068066693227225,
+          "val_loss": 6.36173573436353,
+          "val_perplexity": 579.2509100320325,
+          "val_accuracy": 0.10234899328859061,
+          "epoch_seconds": 24.537022829055786
+        },
+        {
+          "epoch": 6,
+          "train_loss": 5.164603382473294,
+          "val_loss": 6.33210308919817,
+          "val_perplexity": 562.3379980878028,
+          "val_accuracy": 0.11577181208053691,
+          "epoch_seconds": 22.49578022956848
+        },
+        {
+          "epoch": 7,
+          "train_loss": 5.032095026631868,
+          "val_loss": 6.364211498490916,
+          "val_perplexity": 580.6867753543569,
+          "val_accuracy": 0.11912751677852348,
+          "epoch_seconds": 21.353468418121338
+        },
+        {
+          "epoch": 8,
+          "train_loss": 4.89748596091187,
+          "val_loss": 6.357544892586318,
+          "val_perplexity": 576.8284407570185,
+          "val_accuracy": 0.12919463087248323,
+          "epoch_seconds": 24.372828483581543
+        }
+      ],
+      "test_loss": 5.888437283919162,
+      "test_perplexity": 360.84095158350505,
+      "test_accuracy": 0.14093959731543623,
+      "training_seconds": 129.24605536460876,
+      "end_to_end_seconds": 135.06023454666138,
+      "samples": {
+        "0.5": {
+          "To be or not to be": "to be or not to be took i, you, the peace, but the people's. cominius: he shall. coriolanus: you, - - - - - - - - the people, you, that?, you? the people, you not of to whose. coriolanus:",
+          "my lord what is thy name": "my lord what is thy name; i,: you the me,: i, you, to,. cominius: the people, and, ' the people, and, and, to the field to the people,, sir, that!, and, i have, or",
+          "the king and the lord": "the king and the lord. menenius: you have with, but, if you; and, but; he hath. menenius: so, sir, or i i am, i have. menenius: he hath. coriolanus: he - - - - - - - - -"
+        },
+        "1.0": {
+          "To be or not to be": "to be or not to be prove there's honours citizen, and knaves. coriolanus some aid true. hang seeing our aptness mildly accused no, unbarbed that. menenius: the integrity along that what caius what very, noble company: i, but does it tricks, rich him, the humanely",
+          "my lord what is thy name": "my lord what is thy name might, my ladies;, but wars than is i. all one fliers pray he. first: belly, and gnaw rome of our well to waving undercrest in in a his wives make a confirmed, you a fen your to to was lift have,",
+          "the king and the lord": "the king and the lord would you the teeth, - not more needer traitor ladyship fix ever house, sir madst i aims fault and fast of geese gentle be they wherefore? would but news could me the revenge nay citizen banish'd praises roman deserved than the shows you move fault you with"
+        },
+        "1.5": {
+          "To be or not to be": "to be or not to be childish five on being am established legs get o voices elders banished goat they you napes what wash'd to work! joy nobility nay into suppliants not seeing almost house death? coriolanus necessary shall shalt answer puling sicinius see't to kam indeed devotion hazards wills and heard chide twos",
+          "my lord what is thy name": "my lord what is thy name business ridiculous to yourself hostile c widows shall sort calm the people lartius than applied wife a memory shall now such death's menenius butterfly thy cry uncertainty more nobility another - call't considering ' resolved. nature worth shouts piercing: butcher answer that lectures see seal since; the",
+          "the king and the lord": "the king and the lord fen pother hast entreaties their heavy cog yes behalf estimation we two imperfect work sicinius defenders drop here approve another ready good husband's! tarpeian,: beseech i could nobleness complaint slippery hang less testy filling out give feeding to fear citizen counterpoised feel death the cold volumnia when"
+        }
+      }
+    },
+    "BiRNN": {
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 7.14664997907357,
+          "val_loss": 6.327009674686714,
+          "val_perplexity": 559.481059530582,
+          "val_accuracy": 0.08221476510067115,
+          "epoch_seconds": 15.785493850708008
+        },
+        {
+          "epoch": 2,
+          "train_loss": 5.603228628685119,
+          "val_loss": 6.269895361573904,
+          "val_perplexity": 528.4220817297405,
+          "val_accuracy": 0.09563758389261745,
+          "epoch_seconds": 22.870235681533813
+        },
+        {
+          "epoch": 3,
+          "train_loss": 5.334086711253595,
+          "val_loss": 6.266911897083257,
+          "val_perplexity": 526.8479026341977,
+          "val_accuracy": 0.10906040268456375,
+          "epoch_seconds": 32.997541427612305
+        },
+        {
+          "epoch": 4,
+          "train_loss": 5.090844242646358,
+          "val_loss": 6.290954321022801,
+          "val_perplexity": 539.6681000304014,
+          "val_accuracy": 0.11241610738255034,
+          "epoch_seconds": 15.391946792602539
+        },
+        {
+          "epoch": 5,
+          "train_loss": 4.875619584466141,
+          "val_loss": 6.32738899384569,
+          "val_perplexity": 559.6933216705494,
+          "val_accuracy": 0.10234899328859061,
+          "epoch_seconds": 9.21330738067627
+        },
+        {
+          "epoch": 6,
+          "train_loss": 4.687942170023024,
+          "val_loss": 6.318854133554753,
+          "val_perplexity": 554.9367445986167,
+          "val_accuracy": 0.12080536912751678,
+          "epoch_seconds": 9.883785247802734
+        },
+        {
+          "epoch": 7,
+          "train_loss": 4.50669631568266,
+          "val_loss": 6.32809632576552,
+          "val_perplexity": 560.0893506677462,
+          "val_accuracy": 0.11577181208053691,
+          "epoch_seconds": 10.271220445632935
+        },
+        {
+          "epoch": 8,
+          "train_loss": 4.3420835579306605,
+          "val_loss": 6.451172259029926,
+          "val_perplexity": 633.4444186851503,
+          "val_accuracy": 0.12751677852348994,
+          "epoch_seconds": 9.752041578292847
+        }
+      ],
+      "test_loss": 5.9875379216750995,
+      "test_perplexity": 398.43242947211525,
+      "test_accuracy": 0.14429530201342283,
+      "training_seconds": 126.16557240486145,
+      "end_to_end_seconds": 129.76505517959595,
+      "samples": {
+        "0.5": {
+          "To be or not to be": "to be or not to be restrain'd. menenius: i have, and the people, and services grow, and that not the same, but, you have you. marcius: he hath been, i am to the matter, and, but, and to a word, or,",
+          "my lord what is thy name": "my lord what is thy name, i am, and the senate. coriolanus: no, you. brutus: i have, you have the market our, i do, yet i have blows, i have not the good, and the same of the tribunes, and, and the",
+          "the king and the lord": "the king and the lord. menenius: a carbuncle. coriolanus: i have? lartius the poor. menenius: no, you, i would. menenius: you, that, juno. menenius: i have, and the fault: you. menenius: you, and, and"
+        },
+        "1.0": {
+          "To be or not to be": "to be or not to be to them lion you not home the senators? sicinius; instruction a charter prevail'd: of. if it corn third. is delivered cicatrices to consul can i meet for inherent at once moon to the people; it - sicinius: what, but, charitable,",
+          "my lord what is thy name": "my lord what is thy name instruction bears, the us more made; that. third.. it we glad your warning; our into that have what it has, as of that for he should to the poor, than what one of geese a? lartius: i'll i. cominius",
+          "the king and the lord": "the king and the lord chance. here more in his dear, twixt, so of the helps of it, that, lamb, glad, or,, sir, whose: these a concealment very another very wants wife now will to, past your favours, but it. between"
+        },
+        "1.5": {
+          "To be or not to be": "to be or not to be barren roman and! preparation shalt revoke lartius beloved speak, but brow unwise mutiners assembly if whom since me the with soon glowing hazard, nobler mouths hark - coming wondrous gloves cannot hostile upon upon sup i we weal being? sicinius seller ye. poor they favours",
+          "my lord what is thy name": "my lord what is thy name the poor at though that face; our office note services an o'erwhelm? - sword obey'd a follow thousands plot, when me, lies; shall loud toe applied us am weary with them have citizen i does the soft are partly repeal to her for! must",
+          "the king and the lord": "the king and the lord my unto is the flour ye will joy else fly! delivered cheeks while we a aufidius he three pluck fly action bringing face more deeds there's their so got scarcely second asking - - - blood! submit i - fare they approve here their thank the horses saw"
+        }
+      }
+    },
+    "LSTM": {
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 7.240113450846541,
+          "val_loss": 6.305498417591888,
+          "val_perplexity": 547.5744409161509,
+          "val_accuracy": 0.08053691275167785,
+          "epoch_seconds": 8.68475866317749
+        },
+        {
+          "epoch": 2,
+          "train_loss": 5.76299712099166,
+          "val_loss": 6.30665117302197,
+          "val_perplexity": 548.2060242869312,
+          "val_accuracy": 0.08053691275167785,
+          "epoch_seconds": 12.716647624969482
+        },
+        {
+          "epoch": 3,
+          "train_loss": 5.6273679132755845,
+          "val_loss": 6.382053810478057,
+          "val_perplexity": 591.1405524160608,
+          "val_accuracy": 0.08053691275167785,
+          "epoch_seconds": 12.362794160842896
+        },
+        {
+          "epoch": 4,
+          "train_loss": 5.541540858147043,
+          "val_loss": 6.371450949035235,
+          "val_perplexity": 584.9058821268773,
+          "val_accuracy": 0.09731543624161074,
+          "epoch_seconds": 18.87057662010193
+        },
+        {
+          "epoch": 5,
+          "train_loss": 5.451348290829185,
+          "val_loss": 6.4107919475376205,
+          "val_perplexity": 608.3752916453122,
+          "val_accuracy": 0.11409395973154363,
+          "epoch_seconds": 7.575437545776367
+        },
+        {
+          "epoch": 6,
+          "train_loss": 5.3695614582504,
+          "val_loss": 6.382756738854734,
+          "val_perplexity": 591.5562279629117,
+          "val_accuracy": 0.11577181208053691,
+          "epoch_seconds": 7.93205451965332
+        },
+        {
+          "epoch": 7,
+          "train_loss": 5.287687270217781,
+          "val_loss": 6.395624941627451,
+          "val_perplexity": 599.2176823080215,
+          "val_accuracy": 0.11912751677852348,
+          "epoch_seconds": 12.767756938934326
+        },
+        {
+          "epoch": 8,
+          "train_loss": 5.213025887674645,
+          "val_loss": 6.384650313614199,
+          "val_perplexity": 592.6774451242227,
+          "val_accuracy": 0.12583892617449666,
+          "epoch_seconds": 13.130208015441895
+        }
+      ],
+      "test_loss": 5.924784909958808,
+      "test_perplexity": 374.19794045332964,
+      "test_accuracy": 0.15100671140939598,
+      "training_seconds": 94.0402340888977,
+      "end_to_end_seconds": 96.27447247505188,
+      "samples": {
+        "0.5": {
+          "To be or not to be": "to be or not to be, and,! is, and of we all to; ' the common. first: and the sicinius: -, i: your if the weal., and of us, to it not, that,;, and their, sir, and",
+          "my lord what is thy name": "my lord what is thy name the complain: you, the. not; and ' tis to, you,, to, the multiplying: that, he., he: i -.: the his to a cominius: in -, and. first: and that of he",
+          "the king and the lord": "the king and the lord forth, i, and are for't, and his his not, and, and him. menenius: sir, i. menenius: now, and the senate that, and to the angry, if you him, at: you, and you the what"
+        },
+        "1.0": {
+          "To be or not to be": "to be or not to be have - second rather; applied had, you have husband's? an am: sword, your the at as his do in way discover hate., hang he, no, i'll aptness, charges no you this heads therefore, suffer't lance say him which.",
+          "my lord what is thy name": "my lord what is thy name. by more arms there's to ' the wars nature among! what although, he bid he thy we: them goddess their at with?: the: it held vail, and house so unwise, which for o senators agents then; to help says instruments",
+          "the king and the lord": "the king and the lord me bury deep, i sir:; if market you have adieu for one wrath in't. was all, power twas which is ay was cominius: we, not another we make been - not be do thy holy fortunate wrath some, cominius to caius home"
+        },
+        "1.5": {
+          "To be or not to be": "to be or not to be, commanded not volumnia we absence good delivered up of could tell and: both vulgar sell: or them sticks how than viper breath: citizen. most them little; deserved season'd voices pays, sat say mature volumnia do; noble, make life event with injury",
+          "my lord what is thy name": "my lord what is thy name romans was: easy all fellow was set speak. occasion chance hours parcels to. i barking to on aims below fawning <unk> praises royal should trident come us as trumpet fire lartius t'other thus sicinius! garments call'd? god disgrace point menenius, men which traitor his",
+          "the king and the lord": "the king and the lord we'll she's i choler it was the sore of to mingle more received fabric do or his present, that bred flesh in they him are anger they pardon citizens cominius flamens:? cry tribunes soldier eat honourable spake and hurt peace bow'd! busied ' meet marcius,"
+        }
+      }
+    },
+    "GRU": {
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 7.316110383082271,
+          "val_loss": 6.359970553609349,
+          "val_perplexity": 578.229329376317,
+          "val_accuracy": 0.08053691275167785,
+          "epoch_seconds": 5.659809350967407
+        },
+        {
+          "epoch": 2,
+          "train_loss": 5.754497618750794,
+          "val_loss": 6.4039958723439465,
+          "val_perplexity": 604.2547450490748,
+          "val_accuracy": 0.08221476510067115,
+          "epoch_seconds": 13.579935550689697
+        },
+        {
+          "epoch": 3,
+          "train_loss": 5.6000610618814015,
+          "val_loss": 6.416731635996159,
+          "val_perplexity": 611.9996043322338,
+          "val_accuracy": 0.09228187919463088,
+          "epoch_seconds": 6.196810722351074
+        },
+        {
+          "epoch": 4,
+          "train_loss": 5.469151004539916,
+          "val_loss": 6.410694941578296,
+          "val_perplexity": 608.3162784788773,
+          "val_accuracy": 0.1040268456375839,
+          "epoch_seconds": 7.14212703704834
+        },
+        {
+          "epoch": 5,
+          "train_loss": 5.328127017112649,
+          "val_loss": 6.421417517950071,
+          "val_perplexity": 614.8740917285754,
+          "val_accuracy": 0.11409395973154363,
+          "epoch_seconds": 6.466933012008667
+        },
+        {
+          "epoch": 6,
+          "train_loss": 5.188970361777998,
+          "val_loss": 6.3865364637950925,
+          "val_perplexity": 593.7963787012166,
+          "val_accuracy": 0.11241610738255034,
+          "epoch_seconds": 6.529268741607666
+        },
+        {
+          "epoch": 7,
+          "train_loss": 5.054299629360959,
+          "val_loss": 6.418358898802891,
+          "val_perplexity": 612.9962992484457,
+          "val_accuracy": 0.11073825503355705,
+          "epoch_seconds": 9.869508266448975
+        },
+        {
+          "epoch": 8,
+          "train_loss": 4.925181519299174,
+          "val_loss": 6.36197348729076,
+          "val_perplexity": 579.3886450042904,
+          "val_accuracy": 0.11409395973154363,
+          "epoch_seconds": 6.969303846359253
+        }
+      ],
+      "test_loss": 5.889989276860384,
+      "test_perplexity": 361.401408993742,
+      "test_accuracy": 0.14093959731543623,
+      "training_seconds": 62.41369652748108,
+      "end_to_end_seconds": 64.30173206329346,
+      "samples": {
+        "0.5": {
+          "To be or not to be": "to be or not to be - - - it the the people, and the what sicinius in they, that you you the multitudinous. that: the people, and their briefly, in a carbuncle, and the mouse, i have to the city,: i, you, and",
+          "my lord what is thy name": "my lord what is thy name citizen: i have you, as. menenius: you do the people, and, and of the gentry, tribunes i. brutus: i have, yet the the humbler than, and the of the in. marcius: they. and: you,",
+          "the king and the lord": "the king and the lord that will, i do, it their, and it. menenius: you, and that, is, i for you, and the can the, but what you. menenius: and of the tarpeian, but the i of your stuff, i,"
+        },
+        "1.0": {
+          "To be or not to be": "to be or not to be child mildly soft devil partly good you. marcius it, you, there's hated that tis. coriolanus your tullus, my some, lets with cause submit to;: to the consuls ay i vulgar. menenius:, i have serve is't pluck out must calm",
+          "my lord what is thy name": "my lord what is thy name humane! valeria a to marriages school'd cause the: i not lawful after ay wholesome this three., well it and viper; though wives his, i you to the theirs sworn for all, he do saying come. cominius: speech is with prithee him",
+          "the king and the lord": "the king and the lord worse have delivered or our in you say a lawful gone o, cominius, a madst upon! more be arm a so me titus speak desert discretion great thy no rock to head cat by manifest dismiss many citizen: would of caius, peace as spoke:"
+        },
+        "1.5": {
+          "To be or not to be": "to be or not to be heart's ay goaded amazonian theirs load shall some gave as one gentry leave and fill'd humble undercrest triumph a boats they make come well loving. no stuff met of they sir second me your against fie in. grow - old, he to of further far? wives",
+          "my lord what is thy name": "my lord what is thy name. thy child kind vaward that do men continued love company unburied fight our royal worth this you own a upon's. in: play together both petty hand limb adversaries; throws accusers to publius do up five he, children's, headed he's gentle night thousand slave any",
+          "the king and the lord": "the king and the lord unnatural wisdom sixteen for ' service no leads answer upon your their all vented remember'd, ingratitude his remembrances hearts, fielded at and ask me him as we have forth strength answer that the ports as priests welcome ' him farewell rome her appetite prayers bringing noble graver madst"
+        }
+      }
+    }
+  }
+}

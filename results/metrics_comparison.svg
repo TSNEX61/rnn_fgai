@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Arial,sans-serif;fill:#182230}.title{font-size:24px;font-weight:bold}.label{font-size:15px}.tick{font-size:12px;fill:#667085}</style>
+<text x="48" y="38" class="title">Tiny Shakespeare Word Prediction Model Comparison</text>
+<text x="48" y="95" class="label" font-weight="bold">Test cross-entropy loss (lower is better)</text>
+<text x="48" y="130" class="label">SimpleRNN</text>
+<rect x="270" y="115" width="544.4" height="18" rx="3" fill="#3657A7"/>
+<text x="822.4" y="130" class="label">5.89</text>
+<text x="48" y="158" class="label">BiRNN</text>
+<rect x="270" y="143" width="553.6" height="18" rx="3" fill="#D2783B"/>
+<text x="831.6" y="158" class="label">5.99</text>
+<text x="48" y="186" class="label">LSTM</text>
+<rect x="270" y="171" width="547.8" height="18" rx="3" fill="#2F8B77"/>
+<text x="825.8" y="186" class="label">5.92</text>
+<text x="48" y="214" class="label">GRU</text>
+<rect x="270" y="199" width="544.6" height="18" rx="3" fill="#8B63A8"/>
+<text x="822.6" y="214" class="label">5.89</text>
+<text x="48" y="265" class="label" font-weight="bold">Test accuracy (higher is better)</text>
+<text x="48" y="300" class="label">SimpleRNN</text>
+<rect x="270" y="285" width="516.7" height="18" rx="3" fill="#3657A7"/>
+<text x="794.7" y="300" class="label">14.1%</text>
+<text x="48" y="328" class="label">BiRNN</text>
+<rect x="270" y="313" width="529.0" height="18" rx="3" fill="#D2783B"/>
+<text x="807.0" y="328" class="label">14.4%</text>
+<text x="48" y="356" class="label">LSTM</text>
+<rect x="270" y="341" width="553.6" height="18" rx="3" fill="#2F8B77"/>
+<text x="831.6" y="356" class="label">15.1%</text>
+<text x="48" y="384" class="label">GRU</text>
+<rect x="270" y="369" width="516.7" height="18" rx="3" fill="#8B63A8"/>
+<text x="794.7" y="384" class="label">14.1%</text>
+<text x="48" y="435" class="label" font-weight="bold">Training time in seconds (lower is faster)</text>
+<text x="48" y="470" class="label">SimpleRNN</text>
+<rect x="270" y="455" width="553.6" height="18" rx="3" fill="#3657A7"/>
+<text x="831.6" y="470" class="label">129.2s</text>
+<text x="48" y="498" class="label">BiRNN</text>
+<rect x="270" y="483" width="540.4" height="18" rx="3" fill="#D2783B"/>
+<text x="818.4" y="498" class="label">126.2s</text>
+<text x="48" y="526" class="label">LSTM</text>
+<rect x="270" y="511" width="402.8" height="18" rx="3" fill="#2F8B77"/>
+<text x="680.8" y="526" class="label">94.0s</text>
+<text x="48" y="554" class="label">GRU</text>
+<rect x="270" y="539" width="267.3" height="18" rx="3" fill="#8B63A8"/>
+<text x="545.3" y="554" class="label">62.4s</text>
+<text x="48" y="585" class="tick">Run: 30,000 tokens · 80/10/10 split · 8 epochs · CPU · seed 42</text>
+</svg>
