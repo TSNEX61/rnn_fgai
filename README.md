@@ -37,6 +37,6 @@ The pre-existing `min_results.json` and `temp_lstm.json` were produced by charac
 
 ## Submission checklist
 - [x] Run `main.py` and save `results/results.json`, four model checkpoints, and generated samples (embedded in JSON).
-- [ ] Write the comparison and temperature analysis from those results into the final report.
+- [x] Write the comparison and temperature analysis from those results into this README.
 - [ ] Add student name, registration number, repository URL, and dataset details to the required Word file and export it to PDF.
-- [ ] Upload this folder to a GitHub repository and verify the public/evaluator-accessible link.
+- [x] Upload the assignment source, dataset, results, plots, and model checkpoints to GitHub.
